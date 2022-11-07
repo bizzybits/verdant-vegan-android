@@ -9,7 +9,7 @@ import android.util.Patterns
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.ActionBar
-import com.example.firebaseauthtutorial.databinding.ActivityLoginBinding
+import com.example.sqlite_firebase_kotlin.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class LoginActivity : AppCompatActivity() {
