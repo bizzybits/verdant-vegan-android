@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "769694424136",
+    "project_id": "kotlin-sqlite-firebase-test",
+    "storage_bucket": "kotlin-sqlite-firebase-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769694424136:android:b7618834afc6ec52018c7d",
+        "android_client_info": {
+          "package_name": "com.example.sqlite_firebase_kotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "769694424136-pbqrfk4ud56do70hklrhbimf7feonlve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtJZzbSzHkSYCDWJPQwcb9suqCqMlcT1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "769694424136-pbqrfk4ud56do70hklrhbimf7feonlve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
