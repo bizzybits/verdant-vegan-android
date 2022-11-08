@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import com.example.sqlite_firebase_kotlin.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity() {
 
