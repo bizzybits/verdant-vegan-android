@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         android:text="My Recipes"
         android:textSize="20dp"
+        android:textStyle="bold"
         android:padding="10dp" />
 
     <LinearLayout
@@ -36,20 +37,20 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <EditText
-            android:id="@+id/edittext_userid"
-            android:hint="User ID"
+            android:id="@+id/edittext_recipeName"
+            android:hint="Recipe Name"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <EditText
-            android:id="@+id/edittext_name"
-            android:hint="User Name"
+            android:id="@+id/edittext_cuisine"
+            android:hint="Cuisine"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <EditText
-            android:id="@+id/edittext_age"
-            android:hint="User Age"
+            android:id="@+id/edittext_ingredient"
+            android:hint="Main Ingredient"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -60,28 +61,28 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:id="@+id/button_add_user"
+                android:id="@+id/button_add_recipe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="addUser"
-                android:text="Add" />
+                android:onClick="addRecipe"
+                android:text="Add Recipe" />
 
             <Button
-                android:id="@+id/button_delete_user"
+                android:id="@+id/button_delete_recipe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="deleteUser"
-                android:text="Delete" />
+                android:onClick="deleteRecipe"
+                android:text="Delete Recipe" />
 
             <Button
                 android:id="@+id/button_show_all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="showAllUsers"
-                android:text="Show All" />
+                android:onClick="showAllRecipes"
+                android:text="Show All Recipes" />
         </LinearLayout>
 
         <TextView
