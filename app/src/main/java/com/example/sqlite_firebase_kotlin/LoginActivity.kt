@@ -92,6 +92,7 @@ class LoginActivity : AppCompatActivity() {
 
                 //open profile
                 startActivity(Intent(this, ProfileActivity::class.java))
+                //startActivity( Intent(this, MainActivity::class.java))
                 finish()
 
 
