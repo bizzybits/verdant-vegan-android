@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import com.example.sqlite_firebase_kotlin.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -25,7 +25,7 @@ class ProfileActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        usersDBHelper = UsersDBHelper(this)
+        recipesDBHelper = RecipeDBHelper(this)
 
         //configure actionbar
         actionBar = supportActionBar!!
@@ -59,36 +59,36 @@ class ProfileActivity : AppCompatActivity() {
         }
     }
 
-    lateinit var usersDBHelper : UsersDBHelper
+    lateinit var recipesDBHelper : RecipeDBHelper
 
-    fun addUser(v: View){
-        var userid = this.edittext_userid.text.toString()
-        var name = this.edittext_name.text.toString()
-        var age = this.edittext_age.text.toString()
-        var result = usersDBHelper.insertUser(UserModel(userid = userid,name = name,age = age))
+    fun addRecipe(v: View){
+        var recipeName = this.edittext_recipeName.text.toString()
+        var cuisine = this.edittext_cuisine.text.toString()
+        var ingredient = this.edittext_ingredient.text.toString()
+        var result = recipesDBHelper.insertRecipe(RecipeModel(recipeName = recipeName,cuisine = cuisine,ingredient = ingredient))
         //clear all edittext s
-        this.edittext_age.setText("")
-        this.edittext_name.setText("")
-        this.edittext_userid.setText("")
-        this.textview_result.text = "Added user : "+result
+        this.edittext_ingredient.setText("")
+        this.edittext_cuisine.setText("")
+        this.edittext_recipeName.setText("")
+        this.textview_result.text = "Added recipe : "+result
         this.ll_entries.removeAllViews()
     }
 
-    fun deleteUser(v: View){
-        var userid = this.edittext_userid.text.toString()
-        val result = usersDBHelper.deleteUser(userid)
-        this.textview_result.text = "Deleted user : "+result
+    fun deleteRecipe(v: View){
+        var recipeName = this.edittext_recipeName.text.toString()
+        val result = recipesDBHelper.deleteUser(recipeName)
+        this.textview_result.text = "Deleted recipe : "+result
         this.ll_entries.removeAllViews()
     }
-    fun showAllUsers(v: View){
-        var users = usersDBHelper.readAllUsers()
+    fun showAllRecipes(v: View){
+        var recipes = recipesDBHelper.readAllRecipes()
         this.ll_entries.removeAllViews()
-        users.forEach {
-            var tv_user = TextView(this)
-            tv_user.textSize = 30F
-            tv_user.text = it.name.toString() + " - " + it.age.toString()
-            this.ll_entries.addView(tv_user)
+        recipes.forEach {
+            var tv_recipe = TextView(this)
+            tv_recipe.textSize = 15F
+            tv_recipe.text = it.recipeName.toString() + " : " + it.cuisine.toString() + " - " + it.ingredient.toString()
+            this.ll_entries.addView(tv_recipe)
         }
-        this.textview_result.text = "Fetched " + users.size + " users"
+        this.textview_result.text = "Fetched " + recipes.size + " recipes!"
     }
 }
