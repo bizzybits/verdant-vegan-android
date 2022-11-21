@@ -43,7 +43,7 @@ class RecipeDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         return true
     }
     @Throws(SQLiteConstraintException::class)
-    fun deleteUser(recipeName: String): Boolean {
+    fun deleteRecipe(recipeName: String): Boolean {
         // Gets the data repository in write mode
         val db = writableDatabase
         // Define 'where' part of query.
@@ -56,6 +56,27 @@ class RecipeDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         return true
     }
 
+    @Throws(SQLiteConstraintException::class)
+    fun editRecipe(recipeName: String, cuisine: String, ingredient: String): String {
+        //val recipe = ArrayList<String>()
+        // Gets the data repository in write mode
+        val db = writableDatabase
+        // Define 'where' part of query.
+        val selection = DBContract.RecipeEntry.COLUMN_RECIPE_NAME + " LIKE ?"
+        // Specify arguments in placeholder order.
+        val selectionArgs = arrayOf(recipeName)
+
+        // Create a new map of values, where column names are the keys
+        val values = ContentValues()
+        values.put(DBContract.RecipeEntry.COLUMN_RECIPE_NAME, recipeName)
+        values.put(DBContract.RecipeEntry.COLUMN_CUISINE, cuisine)
+        values.put(DBContract.RecipeEntry.COLUMN_INGREDIENT, ingredient)
+
+        // Issue SQL statement.A
+        db.update(DBContract.RecipeEntry.TABLE_NAME, values, selection, selectionArgs)
+        return selectionArgs[0]
+    }
+//App
     fun readRecipe(recipeName: String): ArrayList<RecipeModel> {
         val recipes = ArrayList<RecipeModel>()
         val db = writableDatabase

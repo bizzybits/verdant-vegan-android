@@ -19,7 +19,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_centerHorizontal="true"
-      android:text="Login to your account"
+      android:text="Login to your Verdant Vegan account"
       android:layout_below="@id/titleLabelTv"
       style="@style/TextAppearance.MaterialComponents.Caption"/>
 
