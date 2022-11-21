@@ -29,7 +29,7 @@ class ProfileActivity : AppCompatActivity() {
 
         //configure actionbar
         actionBar = supportActionBar!!
-        actionBar.title = "Profile"
+        actionBar.title = "My Vegan Recipes"
 
         //init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
@@ -76,8 +76,17 @@ class ProfileActivity : AppCompatActivity() {
 
     fun deleteRecipe(v: View){
         var recipeName = this.edittext_recipeName.text.toString()
-        val result = recipesDBHelper.deleteUser(recipeName)
+        val result = recipesDBHelper.deleteRecipe(recipeName)
         this.textview_result.text = "Deleted recipe : "+result
+        this.ll_entries.removeAllViews()
+    }
+
+    fun editRecipe(v: View){
+        var recipeName = this.edittext_recipeName.text.toString()
+        var cuisine = this.edittext_cuisine.text.toString()
+        var ingredient = this.edittext_ingredient.text.toString()
+        val result = recipesDBHelper.editRecipe(recipeName, cuisine, ingredient)
+        this.textview_result.text = "Edited recipe : "+result
         this.ll_entries.removeAllViews()
     }
     fun showAllRecipes(v: View){

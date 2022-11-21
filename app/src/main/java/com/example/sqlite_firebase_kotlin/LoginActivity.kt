@@ -32,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
 
         //configure actionbar
         actionBar = supportActionBar!!
-        actionBar.title = "Login"
+        actionBar.title = "Verdant Vegan"
 
         //configure progress dialog
         progressDialog = ProgressDialog(this)

@@ -27,7 +27,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Recipes"
+        android:text="My Vegan Recipes"
         android:textSize="20dp"
         android:textStyle="bold"
         android:padding="10dp" />
@@ -66,7 +66,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="addRecipe"
-                android:text="Add Recipe" />
+                android:text=" Add Recipe" />
+
+            <Button
+                android:id="@+id/button_edit_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="editRecipe"
+                android:text=" Edit Recipe" />
 
             <Button
                 android:id="@+id/button_delete_recipe"
@@ -74,7 +82,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="deleteRecipe"
-                android:text="Delete Recipe" />
+                android:text=" Delete Recipe" />
+
 
             <Button
                 android:id="@+id/button_show_all"
@@ -82,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="showAllRecipes"
-                android:text="Show All Recipes" />
+                android:text="List All " />
         </LinearLayout>
 
         <TextView
