@@ -32,7 +32,6 @@
       android:src="@drawable/floofcatwithhat"
       android:layout_above="@id/emailTil" />
 
-
   <!--Email-->
   <com.google.android.material.textfield.TextInputLayout
       android:id="@+id/emailTil"
@@ -75,6 +74,13 @@
       android:text="Login"
       android:layout_below="@id/passwordTil"
       android:layout_marginTop="10dp"/>
+  <ImageView
+      android:layout_width="300dp"
+      android:layout_height="150dp"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="10dp"
+      android:src="@drawable/ic_launcher_foreground"
+      android:layout_above="@id/noAccountTv" />
 
   <!--Need account? Signup here-->
   <TextView
