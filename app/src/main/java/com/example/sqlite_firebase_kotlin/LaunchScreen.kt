@@ -1,9 +1,5 @@
 package com.example.sqlite_firebase_kotlin
 
-
-
-
-
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -26,9 +22,8 @@ class LaunchScreen : AppCompatActivity() {
 
         // we used the postDelayed(Runnable, time) method
         // to send a message with a delayed time.
-        //Normal Handler is depricated , so we have to change the code little bit
 
-        // Handler().postDelayed({
+
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)

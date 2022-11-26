@@ -23,10 +23,15 @@
       android:layout_below="@id/titleLabelTv"
       style="@style/TextAppearance.MaterialComponents.Caption"/>
 
-<!--  <ImageView-->
-<!--      android:layout_width="wrap_content"-->
-<!--      android:layout_height="wrap_content"-->
-<!--      android:src="@drawable/jurassicpark" />-->
+  <ImageView
+      android:id="@+id/LaunchScreenImage"
+      android:layout_width="300dp"
+      android:layout_height="150dp"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="10dp"
+      android:src="@drawable/floofcatwithhat"
+      android:layout_above="@id/emailTil" />
+
 
   <!--Email-->
   <com.google.android.material.textfield.TextInputLayout
