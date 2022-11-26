@@ -23,6 +23,11 @@
       android:layout_below="@id/titleLabelTv"
       style="@style/TextAppearance.MaterialComponents.Caption"/>
 
+<!--  <ImageView-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:src="@drawable/jurassicpark" />-->
+
   <!--Email-->
   <com.google.android.material.textfield.TextInputLayout
       android:id="@+id/emailTil"
@@ -65,7 +70,6 @@
       android:text="Login"
       android:layout_below="@id/passwordTil"
       android:layout_marginTop="10dp"/>
-
 
   <!--Need account? Signup here-->
   <TextView
