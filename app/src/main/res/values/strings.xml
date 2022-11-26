@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">sqlite-firebase-kotlin</string>
+    <string name="app_name">Verdant Vegan</string> <!-- sqlite-firebase-kotlin -->
     <string name="no_account">Need an account? <b>Sign Up!</b></string><!--make Sign Up bold-->
 </resources>
