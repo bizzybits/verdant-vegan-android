@@ -24,12 +24,12 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         recipesDBHelper = RecipeDBHelper(this)
 
         //configure actionbar
         actionBar = supportActionBar!!
         actionBar.title = "My Vegan Recipes"
+
 
         //init firebase auth
         firebaseAuth = FirebaseAuth.getInstance()
@@ -40,6 +40,17 @@ class ProfileActivity : AppCompatActivity() {
             firebaseAuth.signOut()
             checkUser()
         }
+
+        val share = Intent.createChooser(Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, "https://vegan.com/info/why/")
+
+            // (Optional) Here we're setting the title of the content
+            putExtra(Intent.EXTRA_TITLE, "Why Go Vegan?")
+
+        }, null)
+        startActivity(share)
+
     }
 
     private fun checkUser() {
