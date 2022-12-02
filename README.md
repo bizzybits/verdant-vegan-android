@@ -7,6 +7,7 @@ Oregon State University - College of Engineering
 The course was a 10 week project I designed in order to gain experience building native mobile application development. 
 I spent 5 weeks learning Android Studio, Kotlin, Firebase API User Authentication and SQLite database.
 
+In this part 2, I spent 1 week on introduction to Kotlin, and 4 weeks of development learning Android Studio, Firebase API User Authentication and SQLite database.
 
 Kotlin Recipe Saving Application with SQLite database and Firebase Authentication login flow.
 CRUD application with SQLite DB and Google Firebase User Authentication 
