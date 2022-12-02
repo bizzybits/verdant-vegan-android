@@ -14,6 +14,9 @@ CRUD application with SQLite DB and Google Firebase User Authentication
 
 Project YouTube Demonstration Video: https://www.youtube.com/watch?v=dRoosLavnSo&ab_channel=ElizabethPonce 
 
+Final Project Discussion with Installation and Testing Guide: 
+[Installation and Instruction Guide.pdf](https://github.com/bizzybits/verdant-vegan-ios/files/10137451/Installation.and.Instruction.Guide.pdf)
+
 ## To Do:
 - add in additional error checking and messaging to users for recipe duplicate names, content.
 - add in additional styling
